@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+        <title>Add a CD to Your Library</title>
+    </head>
+    <body>
+        <h1>Add a CD To Your Library:</h1>
+        <form action='/add' method='post'>
+            <div class='form-group'>
+                <label for='artist'>Artist Name:</label>
+                <input id='artist' name='artist' class='form-control' type='text'>
+                <label for='album'>Album Title:</label>
+                <input id='album' name='album' class='form-control' type='text'>
+                <label for='cover'>Album Cover URL:</label>
+                <input id='cover' name='cover' class='form-control' type='text'>
+            </div>
+            <button type='submit' class='btn'>Add</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>CD Library</title>
+    </head>
+    <body>
+            <h1>Here are your Search Results: </h1>
+
+            <ul>
+                {% for cd in found %}
+                    <img src= {{ cd.getImage }}>
+                    <ul>
+                        <li>{{ cd.getArtist }}</li>
+                        <li>{{ cd.getAlbum }}</li>
+                    </ul>
+                {% endfor %}
+            </ul>
+            <form action='/'>
+                <button type='submit' class='btn'>Go to Library</button>
+            </form>
+    </body>
+</html>

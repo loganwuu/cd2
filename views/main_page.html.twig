@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>CD Library</title>
+    </head>
+    <body>
+        {% if all_cds is empty %}
+            <h1>Welcome to your new CD library!</h1>
+        {% else %}
+            <h1>Here is your CD library!</h1>
+            <ul>
+                {% for cd in all_cds %}
+                    <img src= {{ cd.getImage }}>
+                    <ul>
+                        <li>{{ cd.getArtist }}</li>
+                        <li>{{ cd.getAlbum }}</li>
+                    </ul>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action='/add_form'>
+            <button type='submit' class='btn'>Add new CD</button>
+        </form>
+        <form action='/search_form'>
+            <button type='submit' class='btn'>Search Through Your Collection</button>
+        </form>
+    </body>
+</html>

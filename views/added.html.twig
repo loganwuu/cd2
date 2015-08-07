@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>You've added a new CD</title>
+    </head>
+    <body>
+        <h1>You've added the following CD to your library: </h1>
+        <img src= {{ newCd.getImage }}>
+        <ul>
+            <li>{{ newCd.getArtist }}</li>
+            <li>{{ newCd.getAlbum }}</li>
+        </ul>
+        <form action='/'>
+            <button type='submit' class='btn'>View Your Library</button>
+        </form>
+    </body>
+</html>
